@@ -73,26 +73,26 @@ public class FlightPriceTicketSystem {
 		System.out.println("                         Travel Together, Get Better Deals                         ");
 		
 		Scanner input = new Scanner(System.in);
-		
+		System.out.println("");
 		System.out.print(" Please insert name: ");
 		name=input.nextLine();
 		
-		System.out.println(" Please insert destination: ");
+		System.out.print(" Please insert destination: ");
 		destination=input.nextLine();
 		
-		System.out.println(" Please insert departure date: ");
+		System.out.print(" Please insert departure date: ");
 		departureDate=input.nextLine();
 		
-		System.out.println(" Please insert departure time: ");
+		System.out.print(" Please insert departure time: ");
 		departureTime=input.nextLine();
 		
-		System.out.println(" Please insert the number of total individual package: ");
+		System.out.print(" Please insert the number of individual package to book: ");
 		totalIndividualPack=input.nextInt();
 		
-		System.out.println(" Please insert the number of total duo package: ");
+		System.out.print(" Please insert the number of duo package to book: ");
 		totalDuoPack=input.nextInt();
 		
-		System.out.println(" Please insert the number of total familia package: ");
+		System.out.print(" Please insert the number of familia package to book: ");
 		totalFamiliaPack=input.nextInt();
 		
 		//Calculate total price input from the users
@@ -109,21 +109,22 @@ public class FlightPriceTicketSystem {
 		//Display user flight payment details
 		System.out.println("\n\n                                   GERAK AIRWAYS                              ");
 		System.out.println("                                 FLIGHT PAYMENT DETAILS                           ");
-		System.out.println("\n Name: " +name);
-		System.out.println(" Destination: " +destination);
-		System.out.println(" Departure Date: " +departureDate);
+		System.out.println("\nName: " +name);
+		System.out.println("Destination: " +destination);
+		System.out.println("Departure Date: " +departureDate);
 		System.out.println("Departure Time: " +departureTime);
 		System.out.println("Total individual package: " +totalIndividualPack);
 		System.out.println("Total duo package: " +totalDuoPack);
 		System.out.println("Total familia package: " +totalFamiliaPack);
-		System.out.println("Total price AFTER discount" +totalPrice);
-		System.out.println("Total price AFTER discount" +finalPrice);
-		
-		System.out.println("*********************************************************************************");
+		System.out.printf("Total price BEFORE discount: RM%.2f" ,totalPrice);
+		System.out.println("");
+		System.out.printf("Total price AFTER discount: RM%.2f" ,finalPrice);
+		System.out.println("");
+		System.out.println("\n*********************************************************************************");
 		System.out.println("\n                   YOUR PURCHASE HAVE BEEN SUCCESSFULLY BOOOKED                 ");
 		System.out.println("\n                      THANK YOU FOR BOOKING WITH GERAK AIRWAYS                  ");
 		System.out.println("\n                         Travel Together, Get Better Deals                      ");
-		System.out.println("*********************************************************************************");
+		System.out.println("\n*********************************************************************************");
 		
 		
 	}
