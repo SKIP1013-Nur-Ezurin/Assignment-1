@@ -28,11 +28,13 @@ public class FlightPriceTicketSystem {
 		float totalPrice;
 		float finalPrice;
 		
+		int orderNumber = (int)(Math.random() * 10000);
+		
 		
 		//Calculate every package before promotion
 		individualPrice = seatPrice;
-		duoPrice = (seatPrice * 2) + baggagePrice;
-		familiaPrice= (seatPrice * 5) + baggagePrice+ foodPrice;
+		duoPrice = (seatPrice * 2) + (baggagePrice * 2);
+		familiaPrice= (seatPrice * 5) + (baggagePrice * 5) + (foodPrice * 5);
 		
 		//Calculate every package after promotion
 		individualPrice2 = (individualPrice * disc1 ) /100;
@@ -105,10 +107,12 @@ public class FlightPriceTicketSystem {
 		totalFamilia = familiaPrice * totalFamiliaPack;
 		totalPrice = totalIndividual + totalDuo +totalFamilia;
 		finalPrice = totalIndividual2 + totalDuo2 +totalFamilia2;
-				
+		
+		System.out.println("____________________________________________________________________________________");
 		//Display user flight payment details
-		System.out.println("\n\n                                   GERAK AIRWAYS                              ");
+		System.out.println("\n                                   GERAK AIRWAYS                              ");
 		System.out.println("                                 FLIGHT PAYMENT DETAILS                           ");
+		System.out.println("No of Order:" +orderNumber);
 		System.out.println("\nName: " +name);
 		System.out.println("Destination: " +destination);
 		System.out.println("Departure Date: " +departureDate);
@@ -125,7 +129,7 @@ public class FlightPriceTicketSystem {
 		System.out.println("\n                      THANK YOU FOR BOOKING WITH GERAK AIRWAYS                  ");
 		System.out.println("\n                         Travel Together, Get Better Deals                      ");
 		System.out.println("\n*********************************************************************************");
-		
+		System.out.println("_____________________________________________________________________________________");
 		
 	}
 
