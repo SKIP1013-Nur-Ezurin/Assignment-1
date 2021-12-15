@@ -27,7 +27,7 @@ public class FlightPriceTicketSystem {
 		float totalIndividual2,totalDuo2,totalFamilia2;
 		float totalPrice;
 		float finalPrice;
-		
+		float savePrice;
 		int orderNumber = (int)(Math.random() * 10000);
 		
 		
@@ -59,7 +59,7 @@ public class FlightPriceTicketSystem {
 		System.out.printf("|AFTER PROMO PRICE:RM %.2f", individualPrice2);
 		System.out.printf("|AFTER PROMO PRICE :RM%.2f",duoPrice2);
 		System.out.printf("|AFTER PROMO PRICE:RM%.2f " ,familiaPrice2 );
-		System.out.print("   |");
+		System.out.print("  |");
 		System.out.println("");
 		System.out.println("|      (ONE WAY PER PERSON) |     (ONE WAY TWO PERSON)  |    (ONE WAY FIVE PERSON)     |");
 		System.out.println("|      -No food included    |    -Not food included     |    - Included food           |");
@@ -107,6 +107,7 @@ public class FlightPriceTicketSystem {
 		totalFamilia = familiaPrice * totalFamiliaPack;
 		totalPrice = totalIndividual + totalDuo +totalFamilia;
 		finalPrice = totalIndividual2 + totalDuo2 +totalFamilia2;
+		savePrice = totalPrice - finalPrice;
 		
 		System.out.println("____________________________________________________________________________________");
 		//Display user flight payment details
@@ -123,6 +124,8 @@ public class FlightPriceTicketSystem {
 		System.out.printf("Total price BEFORE discount: RM%.2f" ,totalPrice);
 		System.out.println("");
 		System.out.printf("Total price AFTER discount: RM%.2f" ,finalPrice);
+		System.out.println("");
+		System.out.printf("CONGRATULATIONS!! YOU GET TO SAVE YOUR TICKET FLIGHT FOR DECEMBER PROMOTION WITH RM%.2f" ,savePrice);
 		System.out.println("");
 		System.out.println("\n*********************************************************************************");
 		System.out.println("\n                   YOUR PURCHASE HAVE BEEN SUCCESSFULLY BOOOKED                 ");
